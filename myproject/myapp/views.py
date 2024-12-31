@@ -4,7 +4,7 @@ from myproject.settings import BASE_DIR
 # Create your views here.
 def say_hello(request,name):
     context = {"name":name}
-    return render(request,rf"{BASE_DIR}\templates\helloworld.html",context=context)
+    return render(request,rf"{BASE_DIR}\templates\index.html",context=context)
 
 def greet_user(request,name):
     return_object = {"User":name}
