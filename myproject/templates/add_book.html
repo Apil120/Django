@@ -1,0 +1,19 @@
+<!-- add_book.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Book</title>
+    {% load static %}
+    <link rel="stylesheet" type="text/css" href="{% static 'add_book.css' %}"> <!-- SEARCHES FOR "add_book.CSS" IN STATIC DIR AND APPLIES IT-->
+</head>
+<body>
+    <h1>Add a New Book</h1>
+    <form method="POST">
+        {% csrf_token %}
+        {{ form.as_p }}  <!-- -->
+        <button type="submit">Add Book</button>
+    </form>
+</body>
+</html>

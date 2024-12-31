@@ -1,14 +1,28 @@
-from django.shortcuts import render
+from django.shortcuts import render,redirect
 from django.http import JsonResponse
 from myproject.settings import BASE_DIR
+from .forms import BookForm
 # Create your views here.
 def say_hello(request,name):
     context = {"name":name}
     return render(request,rf"{BASE_DIR}\templates\index.html",context=context)
 
+def add_book(request):
+    if request.method == 'POST':
+        form = BookForm(request.POST)
+        if form.is_valid():
+            form.save()
+
+            return JsonResponse({"message":"Book saved sucessfully!"})
+        
+    else:
+        form = BookForm()
+
+    return render(request,"add_book.html",{"form":form})
 def greet_user(request,name):
     return_object = {"user":name}
     return JsonResponse(return_object)
+
 
 def landing(request):
     return render(request,rf"{BASE_DIR}\templates\greet.html")
