@@ -1,5 +1,5 @@
 from django.shortcuts import render
-from django.http import HttpResponse,JsonResponse
+from django.http import JsonResponse
 from myproject.settings import BASE_DIR
 # Create your views here.
 def say_hello(request,name):
