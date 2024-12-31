@@ -16,10 +16,11 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
-from myapp.views import say_hello,greet_user
+from myapp.views import say_hello,greet_user,landing
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path("helloworld/<str:name>",say_hello),
-    path("greet/<str:name>",greet_user)
+    path("greet/<str:name>",greet_user),
+    path("",landing)
 ]
