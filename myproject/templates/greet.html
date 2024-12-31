@@ -5,10 +5,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Welcome User</title>
     {%load static%}
-    <link rel="stylesheet" type="text/css" href="{% static 'style.css' %}"> <!-- SEARCHES FOR "STYLE.CSS" IN STATIC DIR AND APPLIES IT-->
+    <link rel="stylesheet" type="text/css" href="{% static 'greet.css' %}"> <!-- SEARCHES FOR "STYLE.CSS" IN STATIC DIR AND APPLIES IT-->
 
 </head>
 <body>
-    <h1>Hello, User!</h1>
+    <button id="theme-toggle">Toggle Dark/Light Mode</button>
+
+    <h1>Hello, User!</h1><br>
+        <li><a href="http://127.0.0.1:8000/admin/"> Admin panel </a></li><br>
+        <li><a href="http://127.0.0.1:8000/helloworld/user"> Greet User </a></li><br>
+        <li><a href="http://127.0.0.1:8000/greet/user"> Greet User(JSON) </a></li>
+    <script src="{% static 'script.js' %}"></script>
+
 </body>
 </html>

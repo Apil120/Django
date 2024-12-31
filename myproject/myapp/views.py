@@ -7,7 +7,7 @@ def say_hello(request,name):
     return render(request,rf"{BASE_DIR}\templates\index.html",context=context)
 
 def greet_user(request,name):
-    return_object = {"User":name}
+    return_object = {"user":name}
     return JsonResponse(return_object)
 
 def landing(request):
