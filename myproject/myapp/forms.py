@@ -6,8 +6,3 @@ class BookForm(forms.ModelForm):
         model = Book
         fields = ['title', 'author', 'published_date','price','id','genre']
 
-    def clean_genre(self):
-        genres = self.cleaned_data['genre']
-
-        if isinstance(genres,str):
-            return [genre.strip() for genre in genres.split(",") if genre.strip()]
