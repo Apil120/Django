@@ -21,3 +21,6 @@ def login(request):
         else:
             return render(request, "login.html", {"error": "Invalid username or password"})
     return render(request, "login.html")
+
+def signup(request):
+    pass
