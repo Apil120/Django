@@ -22,6 +22,9 @@ class User(models.Model):
     member_id = models.IntegerField(primary_key=True)
     borrowed_books = models.ManyToManyField(Book,blank=True,related_name="borrowers")#related_name makes it possible to usie query from either model, the User model or the Book model.
 
+    def __str__(self):
+        return self.name
+
 class Transcation(models.Model):
     STATUS = [
         ("returned","Returned"),
