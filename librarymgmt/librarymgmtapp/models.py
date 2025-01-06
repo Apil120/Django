@@ -20,7 +20,7 @@ class User(models.Model):
     name = models.CharField(max_length=100)
     email = models.EmailField(max_length=100,unique=True) 
     member_id = models.IntegerField(primary_key=True)
-    borrowed_books = models.ManyToManyField(Book,blank=True,related_name="borrowers")
+    borrowed_books = models.ManyToManyField(Book,blank=True,related_name="borrowers")#related_name makes it possible to usie query from either model, the User model or the Book model.
 
 class Transcation(models.Model):
     STATUS = [

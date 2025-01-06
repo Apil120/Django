@@ -2,6 +2,7 @@ from django.shortcuts import render,redirect
 from django.http import JsonResponse,HttpResponseRedirect
 from myproject.settings import BASE_DIR
 from .forms import BookForm
+import os
 # Create your views here.
 def say_hello(request,name):
     context = {"name":name}
@@ -25,4 +26,6 @@ def greet_user(request,name):
 
 
 def landing(request):
+    print(BASE_DIR)
+    print(os.listdir(BASE_DIR))
     return render(request,rf"{BASE_DIR}\templates\greet.html")
