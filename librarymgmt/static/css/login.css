@@ -1,108 +1,87 @@
-/* General Styles */
+/* login.css */
+
 body {
     margin: 0;
     font-family: Arial, sans-serif;
-    background-color: #f4f4f4;
+    background-color: #f5f5f5;
     color: #333;
-}
-
-/* Header */
-header {
-    background-color: #333;
-    color: #fff;
-    padding: 1rem 2rem;
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
+    height: 100vh;
 }
 
-header .logo {
-    font-size: 1.5rem;
-    font-weight: bold;
-    color: #ff9900;
-}
-
-header nav {
-    display: flex;
-    gap: 1rem;
-}
-
-header nav a {
-    color: #fff;
-    text-decoration: none;
-    font-size: 1rem;
-    padding: 0.5rem 1rem;
-    border-radius: 5px;
-}
-
-header nav a:hover {
-    background-color: #555;
-}
-
-header nav .btn-login {
-    background-color: #ff9900;
-    color: #fff;
-    font-weight: bold;
-}
-
-header nav .btn-login:hover {
-    background-color: #e68a00;
-}
-
-/* Hero Section */
-.hero {
+.login-container {
+    background-color: #ffffff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 400px;
+    padding: 20px;
     text-align: center;
-    padding: 4rem 2rem;
-    background-color: #f9f9f9;
 }
 
-.hero h1 {
-    font-size: 2.5rem;
-    margin-bottom: 1rem;
+.login-container h1 {
+    font-size: 24px;
+    color: #333;
+    margin-bottom: 20px;
 }
 
-.hero h1 span {
-    color: #ff9900;
+.form-group {
+    margin-bottom: 15px;
+    text-align: left;
+}
+
+.form-group label {
+    display: block;
+    font-size: 14px;
+    color: #666;
+    margin-bottom: 5px;
+}
+
+.form-group input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 14px;
+}
+
+.form-group input:focus {
+    outline: none;
+    border-color: #ffa500;
+    box-shadow: 0 0 4px rgba(255, 165, 0, 0.5);
+}
+
+.btn {
+    background-color: #ffa500;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    font-size: 14px;
     font-weight: bold;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
 }
 
-.hero p {
-    font-size: 1rem;
-    margin-bottom: 2rem;
+.btn:hover {
+    background-color: #e69500;
+}
+
+.footer-text {
+    margin-top: 15px;
+    font-size: 12px;
     color: #666;
 }
 
-.hero .btn-get-started {
-    background-color: #ff9900;
-    color: #fff;
+.footer-text a {
+    color: #ffa500;
     text-decoration: none;
-    font-size: 1rem;
-    padding: 0.75rem 1.5rem;
-    border-radius: 5px;
     font-weight: bold;
 }
 
-.hero .btn-get-started:hover {
-    background-color: #e68a00;
-}
-
-/* Section Styles */
-.section {
-    padding: 3rem 2rem;
-    text-align: center;
-    background-color: #fff;
-}
-
-.section:nth-child(even) {
-    background-color: #f9f9f9;
-}
-
-.section h2 {
-    font-size: 2rem;
-    margin-bottom: 1rem;
-}
-
-.section p {
-    font-size: 1rem;
-    color: #666;
+.footer-text a:hover {
+    text-decoration: underline;
 }
