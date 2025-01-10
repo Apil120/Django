@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    {% load static %}
+
+    <title>Signup - Library Management</title>
+    <link rel="stylesheet" type = "text/css" href="{% static 'css/signup.css' %}">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">Library<span>Mgmt</span></div>
+            <ul>
+                <li><a href="about.html">About</a></li>
+                <li><a href="features.html">Features</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="login.html" class="button">Login</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="signup-section">
+            <h1>Create an Account</h1>
+            <p>Sign up to manage your library efficiently with Library Management.</p>
+
+            <form action="/signup" method="POST">
+                <div class="form-group">
+                    <label for="name">Full Name</label>
+                    <input type="text" id="name" name="name" placeholder="Enter your full name" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email Address</label>
+                    <input type="email" id="email" name="email" placeholder="Enter your email" required>
+                </div>
+                <div class="form-group">
+                    <label for="password">Password</label>
+                    <input type="password" id="password" name="password" placeholder="Enter your password" required>
+                </div>
+                <button type="submit" class="button">Sign Up</button>
+            </form>
+
+            <div class="oauth">
+                <p>Or sign up using</p>
+                <div class="oauth-buttons">
+                    <button class="oauth-google">Sign up with Google</button>
+                    <button class="oauth-facebook">Sign up with Facebook</button>
+                </div>
+            </div>
+
+            <p class="login-link">Already have an account? <a href="http://127.0.0.1:8000/login/">Log in</a></p>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Library Management. All rights reserved.</p>
+    </footer>
+</body>
+</html>

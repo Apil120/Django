@@ -16,4 +16,4 @@ def signin(request):
     
 
 def signup(request):
-    pass
+    return render(request,rf"{BASE_DIR}\templates\signup.html")
