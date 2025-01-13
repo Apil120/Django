@@ -85,3 +85,25 @@ body {
 .footer-text a:hover {
     text-decoration: underline;
 }
+
+.oauth-login {
+    margin-top: 20px;
+    text-align: center;
+}
+
+.btn-google {
+    background-color: #4285f4;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    font-size: 14px;
+    font-weight: bold;
+    border-radius: 5px;
+    cursor: pointer;
+    display: inline-block;
+    margin-top: 10px;
+}
+
+.btn-google:hover {
+    background-color: #357abd;
+}
